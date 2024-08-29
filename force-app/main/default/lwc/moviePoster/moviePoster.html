@@ -1,0 +1,10 @@
+<template>
+    <lightning-card>
+        <template if:true={hasPoster}>
+            <img src={posterUrl} alt="This Movie Poster" />
+        </template>
+        <template if:false={hasPoster}>
+            <img src="https://via.placeholder.com/300x450?text=No+Image+Available" alt="No Image Available" />
+        </template>
+    </lightning-card>
+</template>

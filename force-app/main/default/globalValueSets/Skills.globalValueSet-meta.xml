@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Comic</fullName>
+        <default>false</default>
+        <label>Comic</label>
+    </customValue>
+    <customValue>
+        <fullName>Dramatic</fullName>
+        <default>false</default>
+        <label>Dramatic</label>
+    </customValue>
+    <customValue>
+        <fullName>Romantic</fullName>
+        <default>false</default>
+        <label>Romantic</label>
+    </customValue>
+    <customValue>
+        <fullName>Travesti</fullName>
+        <default>false</default>
+        <label>Travesti</label>
+    </customValue>
+    <customValue>
+        <fullName>Villain</fullName>
+        <default>false</default>
+        <label>Villain</label>
+    </customValue>
+    <masterLabel>Skills</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

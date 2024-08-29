@@ -1,0 +1,10 @@
+.custom-copy-button .slds-button {
+    background-color: #0070d2;
+    color: #ffffff; 
+    border-color: #0070d2;
+}
+
+.custom-copy-button .slds-button:hover {
+    background-color: #005fb2; 
+    border-color: #005fb2;
+}

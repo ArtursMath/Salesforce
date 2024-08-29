@@ -1,0 +1,11 @@
+
+<template>
+    <label style="font-weight: bold;">Upload JSON File</label>
+    <lightning-file-upload
+        name="fileUploader"
+        accept=".json"
+        record-id={recordId}
+        onuploadfinished={handleUploadFinished}>
+    </lightning-file-upload>
+</template>
+

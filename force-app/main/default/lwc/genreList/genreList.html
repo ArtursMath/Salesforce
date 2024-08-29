@@ -1,0 +1,13 @@
+<template>
+    <label style="font-weight: bold;">Select movie genre</label>
+    <lightning-combobox
+        name="genreFilter"
+        value={selectedGenre}
+        placeholder="Select a genre"
+        options={genreOptions}
+        onchange={handleGenreChange}>
+    </lightning-combobox>
+</template>
+
+
+

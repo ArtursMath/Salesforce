@@ -1,0 +1,97 @@
+.slds-card {
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Arrange items vertically inside the card */
+    justify-content: space-between; /* Push content to top and button to bottom */
+    align-items: center; /* Center align items horizontally */
+    margin: 1rem; /* Margin around each card */
+    width: 370px; /* Set a max width for each card */
+    height: 615px;
+    /*height: 100%; Ensure the card takes up full available height */
+    padding: 1rem; /* Optional padding inside the card */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+/* Container to hold movie cards in a row */
+.movie-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping of items */
+    gap: 0.5rem;
+}
+
+.slds-card body {
+    display: block;
+    /*margin-left: 15px;*/
+}
+
+/* Style for images */
+.slds-card img {
+    width: 80%; 
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 1.0rem; /* Optional: rounded corners */
+    margin-bottom: 1.0rem; /* Space below the image */
+    margin-left: 30px; 
+    margin-right: 30px;
+    align-items: center;
+}
+
+/* Styling for movie title */
+.slds-card h2 {
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    margin-bottom: 0.5rem; 
+    margin-top: 0.5rem;
+    margin-left: 15px;
+
+}
+.slds-card p {
+    margin-left: 15px;
+}
+
+/* Additional styling for the badge */
+.slds-badge {
+    background-color: #f3ff4dea; /* Red background for the badge */
+    color: rgb(10, 10, 10); /* White text color */
+    font-size: 0.75rem; /* Smaller font size */
+    font-weight: bold; /* Bold font */
+}
+
+.slds-card button {
+    background-color: #0070d2; 
+    color: white; /* White text color */
+    border: none; /* Remove default border */
+    padding: 0.5rem 1rem; /* Add some padding for better button size */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Font size for the button text */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    margin-bottom: 15px; /* Space below the button */
+    align-self: center; /* Center align button horizontally */
+}
+
+.slds-card button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 16px; /* Adjust as needed */
+}
+
+.pagination-controls button {
+    background-color: #0070d2; /* Salesforce blue */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 10px; /* Space between buttons and text */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination-controls button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}

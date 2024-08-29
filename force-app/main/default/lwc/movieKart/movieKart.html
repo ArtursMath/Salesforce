@@ -1,0 +1,40 @@
+<template>
+    <c-genre-list ongenrechange={handleGenreChange}></c-genre-list>
+    <label style="font-weight: bold;">Select number of records to display</label>
+    <lightning-combobox
+        name="recordsPerPage"
+        value={userSetLimit}
+        placeholder="Select number of records"
+        options={options}
+        onchange={handleLimitChange}>
+    </lightning-combobox>
+ 
+    <template if:true={hasMovies}>
+        <div class="movie-container">
+            <template for:each={currentMovies} for:item="movie">
+                <div key={movie.id} class="slds-card">
+                    <article class="slds-card__body">
+                        <img src={movie.posterUrl} alt="No image" />
+                        <h2>{movie.title}</h2>
+                        <p>Rating: {movie.rating}</p>
+                        <p>Genre: {movie.genre}</p>
+                        <template if:true={movie.isHorror}>
+                            <lightning-badge label="18+" class="slds-var-m-left_small"></lightning-badge>
+                        </template>
+                    </article>
+                    <button data-movie-id={movie.id} onclick={handleDetailsClick}>Details</button>
+                </div>
+            </template>
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination-controls">
+            <button onclick={prevPage} disabled={isPrevDisabled}>Previous</button>
+            <span>Page {currentPage} of {totalPages}</span>
+            <button onclick={nextPage} disabled={isNextDisabled}>Next</button>
+        </div>
+    </template>
+    <template if:false={hasMovies}>
+        <p>No movies found.</p>
+    </template>
+</template>
